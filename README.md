@@ -16,6 +16,7 @@ understand the content before trusting or sharing it.
 The project focuses on realistic, explainable, and ethical AI behavior rather than
 forcing predictions on uncertain or insufficient input text.
 
+The system also includes a Streamlit-based web interface for interactive student use
 
 ------------------------------------------------------------
 PROBLEM STATEMENT
@@ -62,7 +63,7 @@ TECHNOLOGIES USED
 - Matplotlib
 - Seaborn
 - Joblib
-
+-Streamlit
 
 ------------------------------------------------------------
 PROJECT STRUCTURE
@@ -80,6 +81,8 @@ fake_news_detection_education/
 |-- predict_news.py 
 
 |-- summarize_text.py 
+
+|-- app.py
 
 |
 
