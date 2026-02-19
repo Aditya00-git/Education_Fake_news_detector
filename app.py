@@ -57,7 +57,6 @@ def load_model():
     vectorizer = joblib.load("tfidf_vectorizer.pkl")
     return model, vectorizer
 model, vectorizer = load_model()
-nltk.download("stopwords")
 stop_words = set(stopwords.words("english"))
 def clean_text(text):
     text = text.lower()
@@ -78,7 +77,11 @@ st.sidebar.write("Developed by **Aditya Seswani**")
 st.markdown("<h1 style='text-align:center;'> Fake News Detector for Students</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center;'>Analyze news credibility and get a concise summary instantly.</p>", unsafe_allow_html=True)
 st.markdown("### Paste News Article Below")
-news_text = st.text_area("", height=250)
+news_text = st.text_area(
+    "Paste your news article here:",
+    height=250,
+    label_visibility="collapsed"
+)
 if st.button(" Analyze News"):
     if not news_text.strip():
         st.warning("Please enter some text.")
